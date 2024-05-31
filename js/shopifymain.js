@@ -57,14 +57,14 @@ function init() {
     
 
     
-  loader.load("obj/blackcat.gltf", function(gltf) {
+  loader.load("https://cdn.shopify.com/s/files/1/0875/4266/1395/files/blackcat.gltf?v=1717189750", function(gltf) {
     scene.add(gltf.scene);
     logo = gltf.scene;
     animate();
   });
 
     
-    loader.load("obj/blackring.gltf", function(gltf) {
+    loader.load("https://cdn.shopify.com/s/files/1/0875/4266/1395/files/blackring.gltf?v=1717189762", function(gltf) {
     scene.add(gltf.scene);
     ring = gltf.scene;
     animate();
