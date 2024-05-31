@@ -102,7 +102,7 @@ function animate() {
   ring.position.y = 0;
   ring.position.z = 0;
   ring.rotation.z += .002;
-  ring.rotation.y += .001;
+  ring.rotation.y += .021;
     
     
 
