@@ -25,23 +25,13 @@ function init() {
 
   
   //Light setup
-  const ambient = new THREE.AmbientLight(0xffffff, 1);
+  const ambient = new THREE.AmbientLight(0xffffff, 3);
   scene.add(ambient);
-    
 
-
-  const light = new THREE.PointLight(0xffffff, 1);
-  light.position.set(300, 400, -250);
+  const light = new THREE.PointLight(0xffffff, 3);
+  light.position.set(100, 300, -50);
   scene.add(light);
-
     
-  const light2 = new THREE.PointLight(0xffffff, 2);
-  light2.position.set(-400, -400, 250);
-  scene.add(light2);
-
-    
-    
-  
 
     
   //Renderer
@@ -57,18 +47,18 @@ function init() {
     
 
     
-  loader.load("https://cdn.shopify.com/s/files/1/0875/4266/1395/files/blackcat.gltf?v=1717189750", function(gltf) {
+  loader.load("obj/holidaylogo2.gltf", function(gltf) {
     scene.add(gltf.scene);
     logo = gltf.scene;
     animate();
   });
-
     
-    loader.load("https://cdn.shopify.com/s/files/1/0875/4266/1395/files/blackring.gltf?v=1717189762", function(gltf) {
+  loader.load("obj/holidaytext.gltf", function(gltf) {
     scene.add(gltf.scene);
-    ring = gltf.scene;
+    text = gltf.scene;
     animate();
   });
+    
     
   
    
@@ -88,24 +78,20 @@ function animate() {
 //  deathvalley.position.x += 40;
 
     
-  logo.scale.x = 10;
-  logo.scale.y = 10;
-  logo.scale.z = 10;
-  logo.position.y = 0;
+  logo.scale.x = 230;
+  logo.scale.y = 230;
+  logo.scale.z = 230;
+  logo.position.y = -250;
   logo.position.z = 0;
-  logo.rotation.z = .2;
   logo.rotation.y += -.006;
     
-  ring.scale.x = 25;
-  ring.scale.y = 25;
-  ring.scale.z = 25;
-  ring.position.y = 0;
-  ring.position.z = 0;
-  ring.rotation.z += .002;
-  ring.rotation.y += .021;
-    
-    
-
+  text.scale.x = 380;
+  text.scale.y = 380;
+  text.scale.z = 380;
+  text.position.y = 0;
+  text.position.x = 0;
+  text.position.z = -450;
+  text.rotation.z += .003;
   
   
 
@@ -129,7 +115,9 @@ window.addEventListener("resize", onWindowResize);
 
 //Orbit Controls
   controls = new THREE.OrbitControls( camera, renderer.domElement);
-  controls.enableZoom = false;
+  controls.minDistance = 400;
+  controls.maxDistance = 400;
+  controls.enableZoom = true;
   controls.enablePan = false;
 
 

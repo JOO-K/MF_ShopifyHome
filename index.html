@@ -1,28 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>MISFERINE SOFTWARE</title>
+        <title>Holiday Brand Joo</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
         <link type="text/css" rel="stylesheet" href="style.css">
         <link type="text/css" rel="stylesheet" href="nav.css">
+        <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600&display=swap" rel="stylesheet">  
+        <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap" rel="stylesheet">
+        <link rel="icon" href="images/holiday%20logo.png">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        
-        <script src=""></script>
+        <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
     </head>
 
     <body>
 
+        <!--
+<div class="nav">
+<div class="arrow-box-left">
+<a href="outside.html"><h1>&#8678;</h1></a>
+</div>
+<div class="arrow-box-center">
+<a href="outside2.html"><h1>&#8682;</h1></a>
+</div>
+<div class="arrow-box-right">
+<a href="outside3.html"><h1>&#8680;</h1></a>
+</div>
+</div>
+-->
+        <div class="nav">
+            
+            <div class="arrow-box-center">
+                <a href="outside2.html"><h1>ESCAPE</h1></a>
+            </div>
+            
+        </div>
+
+        <div class="flex-container">
+           
+            <div class="text-container">
+                <h1 id="khj1"></h1>
+            </div>
+            <div class="text-container">
+                <h1 id="khj2">eric joo</h1>
+            </div>
+            <div class="text-container">
+                <h1 id="khj3"></h1>
+            </div>
+            
+        </div>
+
+
         <div class="three-container">
 
             <div class="scene"></div>
+            <video id="video1" playsinline webkit-playsinline muted loop autoplay width="200" height="200" src="images/Comp1.mp4" style="display: block;"></video>
 
         </div>
+
+        
+
+        <script>
+            var app = document.getElementById('khj2');
+
+            var typewriter = new Typewriter(app, {
+                loop: true,
+                delay: 5,
+            });
+
+            typewriter
+                .typeString('A holiday is a day set aside by custom or by law on which normal activities, especially business or work including school, are suspended or reduced...')
+                .pauseFor(10000)
+                .deleteAll(0)
+                .typeString('...')
+                .pauseFor(1000)
+                .deleteAll(0)
+                .typeString('...')
+                .pauseFor(10000)
+                .deleteAll(0)
+                .start();
+        </script>
+        
+       
 
         <script src=js/three.min.js></script>
         <script src=js/GLTFLoader.js></script>
         <script src=js/OrbitControls.js></script>
-        <script src=js/shopifymain.js></script>
+        <script src=js/main.js></script>
 
     </body>
 </html>
